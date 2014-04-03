@@ -2,7 +2,7 @@ class GamesController  < ApplicationController
 
 def index
   @user = User.find(params[:user_id])
-  @user.games
+  @games = @user.games
 end
 
 def show

@@ -8,7 +8,8 @@ Madgifs::Application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  root to: 'sessions#new'
+  root to: 'welcome#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
