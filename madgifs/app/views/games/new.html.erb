@@ -1,0 +1,8 @@
+<h1>New Game</h1>
+<%= form_for([@user, @game]) do |f| %>
+<!-- @user is the player -->
+  <h2>
+    The <%= f.text_field :gif1 %> went to the <%= f.text_field :gif2 %> with <%= f.text_field :gif3 %> and <%= f.text_field :gif4 %>.
+  </h2>
+
+<% end %>

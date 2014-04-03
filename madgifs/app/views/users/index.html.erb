@@ -2,5 +2,5 @@
 
 <% @users.each do |user| %>
   <!-- This should be link to start game with user -->
-  <p><%= user.name %></p>
+  <p><%= link_to user.name, new_user_game_path(user) %></p>
 <% end %>
