@@ -26,6 +26,7 @@
               <li>Hello, <%= current_user.name %>!</li>
               <li><%= link_to_unless_current 'Logout', logout_path %> </li>
               <li><%= link_to "My Games", "/users/#{current_user.id}/games" %> </li>
+              <li><%= link_to "All Users", "/users" %> </li>
             </p>
             <% else %>
             <li><%= link_to "Login", login_path %></li>

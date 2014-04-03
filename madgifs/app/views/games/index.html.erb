@@ -1,0 +1,3 @@
+<% @games.each do |game| %>
+  <p><%= link_to "Game from #{game.creator.name}. Click to play.", game %></p>
+<% end %>
