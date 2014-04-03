@@ -1,6 +1,8 @@
 Madgifs::Application.routes.draw do
 
-  resources :users
+  resources :users, shallow: true do
+    resources :games
+  end
 
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
