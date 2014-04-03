@@ -1,0 +1,37 @@
+<% if  @score >= 10 && @score <= 12 %>
+
+  <img src="<%= Game.gif_score6%>">
+  <audio controls><source src="<%= Game.music_score3 %>" type="audio/mp3">
+  </audio>
+
+<% elsif @score >= 8 && @score <= 10 %>
+
+<img src="<%= Game.gif_score5%>">
+  <audio controls><source src="<%= Game.music_score3 %>" type="audio/mp3">
+  </audio>
+
+<% elsif @score >= 6 && @score <= 8 %>
+
+<img src="<%= Game.gif_score4%>">
+  <audio controls><source src="<%= Game.music_score2 %>" type="audio/mp3">
+  </audio>
+
+<% elsif @score >= 4 && @score <= 6 %>
+
+<img src="<%= Game.gif_score3%>">
+  <audio controls><source src="<%= Game.music_score2 %>" type="audio/mp3">
+  </audio>
+
+<% elsif @score >= 2 && @score <= 4 %>
+
+<img src="<%= Game.gif_score2%>">
+  <audio controls><source src="<%= Game.music_score1 %>" type="audio/mp3">
+  </audio>
+
+<% elsif @score >= 0 && @score <= 2 %>
+
+<img src="<%= Game.gif_score1%>">
+  <audio controls><source src="<%= Game.music_score1 %>" type="audio/mp3">
+  </audio>
+
+<% end %>

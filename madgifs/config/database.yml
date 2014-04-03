@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: madgifs_development
   pool: 5
-  username: nplutzik
+  username: jemise111
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: madgifs_test
   pool: 5
-  username: nplutzik
+  username: jemise111
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: madgifs_production
   pool: 5
-  username: nplutzik
+  username: jemise111
   password:

@@ -1,5 +1,7 @@
 Madgifs::Application.routes.draw do
 
+  get '/games/:id/score', to: 'games#score'
+
   resources :users, shallow: true do
     resources :games
   end
