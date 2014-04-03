@@ -7,9 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<ul>
-  <li><%= link_to 'Home', root_path %></li>
-</ul>
+  <nav>
+    <ul class='horizontal_list'>
+      <li><%= link_to_unless_current 'Home', root_path %></li>
+      <% if current_user %>
+        <li><%= link_to_unless_current 'Logout', logout_path %></li>
+        <li>
+          <%= link_to_unless_current current_user.name, current_user %>
+        </li>
+      <% else %>
+        <li><%= link_to_unless_current 'Login', login_path %></li>
+      <% end %>
+    </ul>
+  </nav>
 <%= yield %>
 
 </body>
