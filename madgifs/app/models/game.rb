@@ -3,34 +3,34 @@ class Game < ActiveRecord::Base
   belongs_to :player, class_name: "User"
 
 def gif_score1
-  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=burn&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=burn&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 
 def gif_score2
-  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=facepalm&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=facepalm&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 
 
 def gif_score3
-  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=whatever&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=whatever&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 
 def gif_score4
-  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=thumbs-up&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=thumbs-up&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 
 def gif_score5
-  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=high-five&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=high-five&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 
 
 def gif_score6
-  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=mic-drop&api_key=dc6zaTOxFJmzC")["data"].sample["url"] + ".gif"
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=mic-drop&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
 end
 
 

@@ -35,7 +35,42 @@ end
 
 
 def score
-  @score = Game.find(params[:id])
+  def gif_score1
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=burn&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+
+
+def gif_score2
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=facepalm&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+
+
+
+def gif_score3
+  return HTTParty.get("http://api.giphy.com/v1/gifs/search?q=whatever&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+
+
+def gif_score4
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=thumbs-up&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+
+
+def gif_score5
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=high-five&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+
+
+
+def gif_score6
+  return  HTTParty.get("http://api.giphy.com/v1/gifs/search?q=mic-drop&api_key=dc6zaTOxFJmzC")["data"].sample["images"]["fixed_height"]["url"]
+end
+  @gif_url = gif_score6
+  @score = rand(12)
+end
+
+def calculate_score
+  game = Game.find(params[:id])
 end
 
 private

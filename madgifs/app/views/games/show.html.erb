@@ -1,6 +1,12 @@
-
-
 <p>
     The <br><br><%= image_tag(@game.gif1) %> went to the <br><br><%= image_tag(@game.gif2) %> with <br><br><%= image_tag(@game.gif3) %> and <br><br><%= image_tag(@game.gif4) %>.
 </p>
+
+
+<h3>Guess the full sentence (case sensitive).</h3>
+
+<%= form_tag("/games/#{@game.id}/score", method: :get) do %>
+  <%= text_area_tag :answer %>
+  <%= submit_tag 'guess!' %>
+<% end %>
 

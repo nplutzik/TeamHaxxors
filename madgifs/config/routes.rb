@@ -1,6 +1,7 @@
 Madgifs::Application.routes.draw do
 
   get '/games/:id/score', to: 'games#score'
+  post '/games/:id/calculate_score', to: 'games#calculate_score'
 
   resources :users, shallow: true do
     resources :games
